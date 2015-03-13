@@ -1,16 +1,7 @@
-# prototype
-Template Project for Rapid Prototype Creation - Rails, Angular.js, Cucumber, CoffeeScript, Sass
-
-# run things
-(It is often smoothest to prefix all of these with `bundle exec`)
-
-`cucumber` to run through-the-browser full stack acceptance tests
-
-`rspec`    to run rails API specs (model & controller tests)
-
-`teaspoon` to run angular javascript unit tests
-
-`rake bower:install` to install bower dependencies (or `bower install`)
+# Pi!
+This app is just for fun, created for Pi Day (3/14) 2015. It uses each visiting browser as a node to run monte carlo simulations to estimate pi, and report results back to the server.
 
 # credit where credit is due
-This application is based on the [angular rails book](http://angular-rails.com/). There are a couple of tweaks, like using cucumber, but you can get up to speed on the what and why the sample code is doing by reviewing the great tutorial there.
+* Hat tip to @bokmann for his Arlington Ruby presentation on pi in ruby
+* The javascript monte carlo algorithm is adapted from [rosetta code](http://rosettacode.org/wiki/Monte_Carlo_methods#JavaScript)
+* Some of the rails/angular organization is based on the [angular rails](http://angular-rails.com/) book
