@@ -9,13 +9,17 @@ controllers.controller("PiController", [ '$scope', '$routeParams', '$location', 
     $scope.lastPi = "-"
     $scope.iterations = 10000000
     $scope.iterationResults = []
+    $scope.running = false
+
+    $scope.toggleRun = ->
+      $scope.running = !$scope.running
 
     $scope.piTrial = ->
       hits = runTrial($scope.iterations)
       $scope.iterationResults.push( {i:$scope.iterations,h:hits} )
       saveResult($scope.iterations,hits)
       $scope.lastPi = 4*hits/$scope.iterations
-      getGrandTotals()
+      
 
     $scope.yourPi = ->
       if $scope.totalHits > 0
@@ -54,5 +58,12 @@ controllers.controller("PiController", [ '$scope', '$routeParams', '$location', 
       Result.create({hits:h,iterations:i},onError)
 
     getGrandTotals()
+
+    onTimerTick = ->
+      if $scope.running
+        $scope.piTrial()
+
+    setInterval(onTimerTick,    5000)
+    setInterval(getGrandTotals, 10000)
 
 ])

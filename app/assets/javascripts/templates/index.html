@@ -5,9 +5,13 @@
       <div class="col-md-8">
         <h1>Happy Pi Day!</h1>
         <p>Help us calculate Pi.</p>
-        <p>
-          <button class="btn btn-primary btn-lg" role="button" ng-click="piTrial()">Pi Me! &raquo;</button>
-          Go ahead and run <strong>{{iterations | number}}</strong> iterations!
+        <p ng-show="!running">
+          <button class="btn btn-primary btn-lg" role="button" ng-click="toggleRun()">Pi Me! <i class="glyphicon glyphicon-play"> </i></button>
+          Start running <strong>{{iterations | number}}</strong> iterations every 5 seconds!
+        </p>
+        <p ng-show="running">
+          <button class="btn btn-danger btn-lg" role="button" ng-click="toggleRun()">Pause <i class="glyphicon glyphicon-pause"> </i></button>
+          Take a break from all this hard work
         </p>
       </div>
       <div class="col-md-4">
