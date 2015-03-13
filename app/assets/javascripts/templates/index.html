@@ -24,20 +24,32 @@
 <div class="container">
   <!-- Example row of columns -->
   <div class="row">
-    <div class="col-md-4 text-primary">
-      <h2 class="text-primary">{{lastPi}}</h2>
-      <p>Your last Pi calculation</p>
-      <p>Based on <strong>{{iterations | number}}</strong> iterations</p>
-    </div>
-    <div class="col-md-4 text-muted">
-      <h2 class="text-muted">{{yourPi()}}</h2>
-      <p>Your overall Pi calculation</p>
-      <p>Based on <strong>{{totalIterations | number}}</strong> iterations</p>
+    <div class="col-md-4">
+      <div class="panel panel-info">
+        <div class="panel-heading">{{lastPi}}</div>
+        <div class="panel-body text-muted">
+          <p>Your last Pi calculation</p>
+          <p>Based on <strong>{{iterations | number}}</strong> iterations</p>
+        </div>
+      </div>
     </div>
     <div class="col-md-4">
-      <h2>{{overallPi()}}</h2>
-      <p>The global Pi calculated so far</p>
-      <p>Based on <strong>{{overallIterations | number}}</strong> iterations from all contributors</p>
+      <div class="panel panel-success">
+        <div class="panel-heading">{{yourPi()}}</div>
+        <div class="panel-body text-muted">
+          <p>Your overall Pi calculation</p>
+          <p>Based on <strong>{{totalIterations | number}}</strong> iterations</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">{{overallPi()}}</div>
+        <div class="panel-body text-muted">
+          <p>The global Pi calculated so far</p>
+          <p>Based on <strong>{{overallIterations | number}}</strong> iterations from all contributors</p>
+        </div>
+      </div>
     </div>
   </div>
 
