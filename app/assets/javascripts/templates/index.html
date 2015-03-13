@@ -1,0 +1,59 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div containerlass="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Pi Day</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name (optional)" class="form-control">
+        </div>
+      </form>
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+    <h1>Pi Day!</h1>
+    <p>Help us calculate Pi!</p>
+    <p>
+        <button class="btn btn-primary btn-lg" role="button" ng-click="piTrial()">Pi Me! &raquo;</button>
+        Go ahead and run <strong>{{iterations | number}}</strong> iterations!
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-4">
+      <h2>{{lastPi}}</h2>
+      <p>Your last Pi calculation</p>
+      <p>Based on <strong>{{iterations | number}}</strong> iterations</p>
+    </div>
+    <div class="col-md-4">
+      <h2>{{yourPi()}}</h2>
+      <p>Your overall Pi calculation</p>
+      <p>Based on <strong>{{totalIterations | number}}</strong> iterations</p>
+    </div>
+    <div class="col-md-4">
+      <h2>{{overallPi()}}</h2>
+      <p>This is the global pi calculated so far</p>
+      <p>Based on <strong>{{overallIterations | number}}</strong> iterations</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <footer>
+    <p>&copy; Company 2014</p>
+  </footer>
+</div> <!-- /container -->

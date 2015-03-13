@@ -4,9 +4,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home#index'
-  resources :recipes
-  resources :farmers_markets, only: [:index, :show]
-  resources :social_security_beneficiaries, only: [:show]
+  get 'totals' => 'results#totals'
+  resources :results
 
 
   # Example of regular route:

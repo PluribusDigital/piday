@@ -1,4 +1,4 @@
-templicious = angular.module('templicious',[
+piday = angular.module('piday',[
   'templates',
   'ngRoute',
   'ngResource',
@@ -7,7 +7,7 @@ templicious = angular.module('templicious',[
   'angular-flash.flash-alert-directive'
 ])
 
-templicious.config([ '$routeProvider', 'flashProvider',
+piday.config([ '$routeProvider', 'flashProvider',
   ($routeProvider,flashProvider)->
 
     flashProvider.errorClassnames.push("alert-danger")
@@ -17,24 +17,8 @@ templicious.config([ '$routeProvider', 'flashProvider',
 
     $routeProvider
       .when('/',
-        templateUrl: "recipe/index.html"
-        controller: 'RecipesController'
-      )
-      .when('/recipe/new',
-        templateUrl: "recipe/form.html"
-        controller:  'RecipeController'
-      )
-      .when('/recipe/:id',
-        templateUrl: "recipe/show.html"
-        controller: 'RecipeController'
-      )
-      .when('/recipe/:id/edit',
-        templateUrl: "recipe/form.html"
-        controller: 'RecipeController'
-      )
-      .when('/zip/:id',
-        templateUrl: "zip/show.html"
-        controller: 'ZipController'
+        templateUrl: "index.html"
+        controller: 'PiController'
       )
 ])
 
