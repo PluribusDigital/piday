@@ -11,7 +11,7 @@
         </p>
       </div>
       <div class="col-md-4">
-        <h4>What are we doing?</h4>
+        <h4>What are we doing here?</h4>
         <p><small>
           The number pi is based on the ratio of the circumference or area of a circle as compared to its radius. 
           Do find this ratio, we use the monte carlo method, basically throwing millions of virtual darts at a target to see how many land inside the circle.
@@ -24,13 +24,13 @@
 <div class="container">
   <!-- Example row of columns -->
   <div class="row">
-    <div class="col-md-4">
-      <h2>{{lastPi}}</h2>
+    <div class="col-md-4 text-primary">
+      <h2 class="text-primary">{{lastPi}}</h2>
       <p>Your last Pi calculation</p>
       <p>Based on <strong>{{iterations | number}}</strong> iterations</p>
     </div>
-    <div class="col-md-4">
-      <h2>{{yourPi()}}</h2>
+    <div class="col-md-4 text-muted">
+      <h2 class="text-muted">{{yourPi()}}</h2>
       <p>Your overall Pi calculation</p>
       <p>Based on <strong>{{totalIterations | number}}</strong> iterations</p>
     </div>
