@@ -1,12 +1,23 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
   <div class="container">
-    <h1>Pi Day!</h1>
-    <p>Help us calculate Pi!</p>
-    <p>
-        <button class="btn btn-primary btn-lg" role="button" ng-click="piTrial()">Pi Me! &raquo;</button>
-        Go ahead and run <strong>{{iterations | number}}</strong> iterations!
-    </p>
+    <div class="row">
+      <div class="col-md-8">
+        <h1>Happy Pi Day!</h1>
+        <p>Help us calculate Pi.</p>
+        <p>
+          <button class="btn btn-primary btn-lg" role="button" ng-click="piTrial()">Pi Me! &raquo;</button>
+          Go ahead and run <strong>{{iterations | number}}</strong> iterations!
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h4>What are we doing?</h4>
+        <p><small>
+          The number pi is based on the ratio of the circumference or area of a circle as compared to its radius. 
+          Do find this ratio, we use the monte carlo method, basically throwing millions of virtual darts at a target to see how many land inside the circle.
+        </small></p>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -25,14 +36,27 @@
     </div>
     <div class="col-md-4">
       <h2>{{overallPi()}}</h2>
-      <p>This is the global pi calculated so far</p>
-      <p>Based on <strong>{{overallIterations | number}}</strong> iterations</p>
+      <p>The global Pi calculated so far</p>
+      <p>Based on <strong>{{overallIterations | number}}</strong> iterations from all contributors</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Credits and Inspiration</h2>
+      <ul>
+        <li>The monte carlo algorithm is adapted from <a href="http://rosettacode.org/wiki/Monte_Carlo_methods#JavaScript">rosetta code</a></li>
+        <li>The idea for this app was spurred by <a href="https://twitter.com/bokmann">Dave Bock's</a> talk at <a href="https://twitter.com/arlingtonruby">Arlington Ruby</a></li>
+      </ul>
     </div>
   </div>
 
   <hr>
 
   <footer>
-    <p>&copy; Company 2014</p>
+    <span class="pull-right"><a href="http://stsiinc.com/"><img src="/stsi_logo.png"/></a></span>
+    <p>Created by <a href="http://stsiinc.com/">STSI</a>.<br> 
+      <a href="https://github.com/STSILABS/piday">Code</a> is on github.
+    </p>
   </footer>
 </div> <!-- /container -->
